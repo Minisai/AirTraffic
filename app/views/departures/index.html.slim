@@ -3,15 +3,15 @@ h3
 
 button.btn.btn-primary#add-departure type="button" Add departure
 
-table.table
+table.table#departures
   thead
     tr
       th Name
       th Departed at
   tbody
-    - @departures.find_each do |departure|
+    - @departures.each do |departure|
       tr
         td
-          = departure.name
+          = "Flight #{departure.id}"
         td
-          = departure.departed_at
+          = departure.departed_at.presence || 'Scheduled'
