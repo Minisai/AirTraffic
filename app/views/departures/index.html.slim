@@ -10,8 +10,10 @@ table.table#departures
       th Departed at
   tbody
     - @departures.each do |departure|
-      tr
+      tr data-id=departure.id
         td
           = "Flight #{departure.id}"
         td
-          = departure.departed_at.presence || 'Scheduled'
+          = departure.departed_at.try(:to_formatted_s, :rfc822).presence || 'Scheduled'
+
+= subscribe_to "/departures"

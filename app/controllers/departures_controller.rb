@@ -1,6 +1,6 @@
 class DeparturesController < ApplicationController
   def index
-    @departures = Departure.order(created_at: :desc)
+    @departures = Departure.order(id: :desc)
   end
 
   def create
