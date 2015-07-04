@@ -1,5 +1,5 @@
 class DepartJob < ActiveJob::Base
-  queue_as :default
+  queue_as :serial_work
 
   def perform(departure)
     sleep(rand(10..15))

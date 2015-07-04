@@ -13,6 +13,7 @@ gem 'slim-rails'
 gem 'private_pub'
 gem 'thin'
 gem 'resque'
+gem 'resque-lonely_job', '~> 1.0.0'
 
 group :development do
   gem 'better_errors'
