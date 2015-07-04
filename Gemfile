@@ -7,14 +7,14 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-group :development, :test do
-  gem 'byebug'
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
-end
 gem 'bootstrap-sass'
 gem 'mysql2'
 gem 'slim-rails'
+
+gem 'private_pub'
+gem 'thin'
+gem 'resque'
+
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'
@@ -22,6 +22,8 @@ group :development do
   gem 'spring-commands-rspec'
 end
 group :development, :test do
+  gem 'byebug'
+  gem 'web-console', '~> 2.0'
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'pry-rails'
